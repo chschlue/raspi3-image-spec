@@ -1,7 +1,8 @@
-# Raspberry Pi 3 image spec
+# Raspberry Pi 3 image spec (fork)
 
 This repository contains the files with which the image referenced at
 https://wiki.debian.org/RaspberryPi3 has been built.
+
 This fork adds compatibility with the Raspi 3B+.
 
 ## Option 1: Downloading an image
