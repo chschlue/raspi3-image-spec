@@ -115,7 +115,15 @@ steps:
 
       Please change the root password by running passwd
       EOT
+
+      # Copy patched raspi3-firmware
+      install -m 644 -o root -g root raspi3-firmware_1.20180619-1.1_arm64.deb "${ROOT?}/root"
     root-fs: root-fs
+
+  # Install patched raspi3-firmware
+  - chroot: root-fs
+    shell: |
+      dpkg -i /root/raspi3-firmware_1.20180619-1.1_arm64.deb
 
   # Clean up archive cache (likely not useful) and lists (likely outdated) to
   # reduce image size by several hundred megabytes.
