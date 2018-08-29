@@ -24,7 +24,7 @@ steps:
     partition: boot-part
     label: raspiboot
 
-  - mkfs: ext4
+  - mkfs: f2fs
     partition: root-part
     label: raspiroot
 
